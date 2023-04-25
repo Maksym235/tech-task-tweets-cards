@@ -19,10 +19,11 @@ import {
   Text,
   Btn,
 } from "./Home.styled";
+import { useLocation } from "react-router-dom";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
-
+  const location = useLocation();
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -44,7 +45,7 @@ export default function Home() {
                 corrupti fuga cumque pariatur debitis, sed magnam accusamus sunt
                 quia molestias deserunt adipisci ipsa rem?
               </Description>
-              <LinkToTweets to="/tweets" state={{ from: "/" }}>
+              <LinkToTweets to="/tweets" state={{ from: location }}>
                 Go to tweets page <BsArrowRight />
               </LinkToTweets>
             </SideBlockWrapper>

@@ -8,7 +8,7 @@ export default function Tweets() {
   const [selectValue, setSelecValue] = useState("all");
   const location = useLocation();
   console.log(location);
-  const backLinkHref = location.state.from ?? "/";
+  const backLinkHref = location.state?.from ?? "/";
 
   const onChange = (value) => {
     setSelecValue(value);
