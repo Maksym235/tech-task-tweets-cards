@@ -7,7 +7,6 @@ import { SelectFollow } from "../../components/Select/Select";
 export default function Tweets() {
   const [selectValue, setSelecValue] = useState("all");
   const location = useLocation();
-  console.log(location);
   const backLinkHref = location.state?.from ?? "/";
 
   const onChange = (value) => {
